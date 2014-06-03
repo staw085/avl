@@ -111,7 +111,7 @@ namespace WpfApplication1 {
         public void startAnimation(object Sender, System.ComponentModel.DoWorkEventArgs e) {
             while( animationStart ) {
                 this.InvokeIfRequired(() => updateBoard());
-                Thread.Sleep(100);
+                Thread.Sleep(500);
             }
         }
 
