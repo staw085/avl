@@ -1,0 +1,2 @@
+Projekt - automat lotki-volterry
+
