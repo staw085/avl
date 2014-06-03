@@ -11,17 +11,10 @@ namespace WpfApplication1 {
         Random random = new Random();
         Cell[,] cells = new Cell[100, 100];
 
-        public void setNewBoard() {
+        public Board() {
             for( int j = 0; j < 100; j++ ) {
                 for( int i = 0; i < 100; i++ ) {
-                    Rectangle rectangle = new Rectangle() {
-                        Stroke = Brushes.White,
-                        Fill = Brushes.White,
-                        Width = 5,
-                        Height = 5,
-                        Margin = new Thickness(left : i*5, top : j*5, right : 0, bottom : 0),
-                    };
-                    cells[j, i] = new Cell(0, rectangle);
+                    cells[j, i] = new Cell(0);
                 }
             }
         }

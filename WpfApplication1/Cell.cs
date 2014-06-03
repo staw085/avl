@@ -9,28 +9,9 @@ using System.Windows;
 namespace WpfApplication1 {
     class Cell {
         int type;
-        Rectangle rectangle;
 
-        public Cell( int type, Rectangle rectangle) {
+        public Cell( int type) {
             this.type = type;
-            this.rectangle = rectangle;
-        }
-
-        public void setColor(){
-            switch(type) {
-                case 0:
-                    rectangle.Stroke = Brushes.White;
-                    rectangle.Fill = Brushes.White;
-                    break;
-                case 1:
-                    rectangle.Stroke = Brushes.Green;
-                    rectangle.Fill = Brushes.Green;
-                    break;
-                case 2:
-                    rectangle.Stroke = Brushes.Red;
-                    rectangle.Fill = Brushes.Red;
-                    break;
-            }
         }
 
         public int getType() {
@@ -39,11 +20,8 @@ namespace WpfApplication1 {
 
         public void setType(int c) {
             this.type = c;
-            setColor();
+           // setColor();
         }
 
-        public Rectangle getRectangle() {
-            return rectangle;
-        }
     }
 }
