@@ -9,11 +9,11 @@ using System.Windows;
 namespace WpfApplication1 {
     class Board {
         Random random = new Random();
-        Cell[,] cells = new Cell[100, 100];
+        Cell[,] cells = new Cell[50, 50];
 
         public Board() {
-            for( int j = 0; j < 100; j++ ) {
-                for( int i = 0; i < 100; i++ ) {
+            for( int j = 0; j < 50; j++ ) {
+                for( int i = 0; i < 50; i++ ) {
                     cells[j, i] = new Cell(0);
                 }
             }
@@ -23,8 +23,8 @@ namespace WpfApplication1 {
             for( int i=0; i<amount; i++ ) {
                 bool empty = true;
                 while( empty ) {
-                    int x = random.Next(100);
-                    int y = random.Next(100);
+                    int x = random.Next(50);
+                    int y = random.Next(50);
                     if( cells[x, y].getType() == 0 ) {
                         cells[x, y].setType(type);
                         empty = false;
