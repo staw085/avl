@@ -8,10 +8,13 @@ using System.Windows;
 
 namespace WpfApplication1 {
     class Cell {
+        int x, y;
         int type;
 
-        public Cell( int type) {
+        public Cell(int type, int x, int y) {
             this.type = type;
+            this.x = x;
+            this.y = y;
         }
 
         public int getType() {
@@ -20,8 +23,12 @@ namespace WpfApplication1 {
 
         public void setType(int c) {
             this.type = c;
-           // setColor();
         }
-
+        public int getX() {
+            return x;
+        }
+        public int getY() {
+            return y;
+        }
     }
 }

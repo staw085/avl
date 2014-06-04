@@ -14,7 +14,7 @@ namespace WpfApplication1 {
         public Board() {
             for( int j = 0; j < 50; j++ ) {
                 for( int i = 0; i < 50; i++ ) {
-                    cells[j, i] = new Cell(0);
+                    cells[j, i] = new Cell(0,j,i);
                 }
             }
         }
